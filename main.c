@@ -31,6 +31,21 @@ int main() {
                 printf("n=");
                 g = scanf("%d", &n);
             }
+            while(n<3) {
+                printf( " n must be greater than 3\n");
+                printf("n=");
+                g = scanf("%d", &n);
+                if (g == EOF) {
+                    return 0;
+                }
+                while (g != 1) {
+                    printf("This program works only with numbers\n");
+                    scanf("%*[^\n]");
+                    printf("n=");
+                    g = scanf("%d", &n);
+                }
+
+            }
             printf("m=");
             l = scanf("%d", &m);
             if (l == EOF) {
@@ -41,6 +56,20 @@ int main() {
                 scanf("%*[^\n]");
                 printf("m=");
                 l = scanf("%d", &m);
+            }
+            while (m<3) {
+                printf( " n must be greater than 3\n");
+                printf("m=");
+                l = scanf("%d", &m);
+                if (l == EOF) {
+                    return 0;
+                }
+                while (l != 1) {
+                    printf("This program works only with numbers\n");
+                    scanf("%*[^\n]");
+                    printf("m=");
+                    l = scanf("%d", &m);
+                }
             }
             int arr[n][m];
             printf("Enter elements\n");
